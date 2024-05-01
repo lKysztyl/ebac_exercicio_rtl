@@ -25,5 +25,7 @@ describe('Teste para o componente PostComment', () => {
         });
         fireEvent.click(screen.getByTestId('button-id'));
         expect(screen.getByText('Golang baby!')).toBeInTheDocument();
+
+        expect(screen.getAllByTestId('lista-comentario')).toHaveLength(2);
     });
 });
